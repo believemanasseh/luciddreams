@@ -2,9 +2,9 @@ from pydantic import EmailStr
 from sqlalchemy import and_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from src.controllers.hasher import Hasher
 from src.models import Post, User
 from src.schemas import PostSchema, UserSchema
-from src.utils.hasher import Hasher
 
 
 async def create_user(db: AsyncSession, user: UserSchema):
